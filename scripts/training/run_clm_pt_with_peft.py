@@ -621,8 +621,8 @@ def main():
     tokenizer_vocab_size = len(tokenizer)
     logger.info(f"Model vocab size: {model_vocab_size}")
     logger.info(f"Tokenizer vocab size: {tokenizer_vocab_size}")
-    if tokenizer_vocab_size != 55296:
-        raise ValueError(f"The vocab size of tokenizer is {tokenizer_vocab_size}, not 55296. Please use Chinese-LLaMA-2 tokenizer.")
+    # if tokenizer_vocab_size != 55296:
+    #     raise ValueError(f"The vocab size of tokenizer is {tokenizer_vocab_size}, not 55296. Please use Chinese-LLaMA-2 tokenizer.")
     if model_vocab_size != tokenizer_vocab_size:
         logger.info(f"Resize model vocab size to {tokenizer_vocab_size}")
         model.resize_token_embeddings(len(tokenizer))
